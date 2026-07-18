@@ -1,0 +1,1023 @@
+/* =====================================
+   GLOBAL SETTINGS
+===================================== */
+
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+html{
+    scroll-behavior:smooth;
+}
+
+
+body{
+
+    min-height:100vh;
+
+    font-family:'Poppins',sans-serif;
+
+    color:white;
+
+    overflow-x:hidden;
+
+    background:
+
+    radial-gradient(circle at top,
+    #ff9a9e,
+    #fad0c4 40%,
+    #1a1a2e 100%);
+
+}
+
+
+
+
+
+/* =====================================
+   GLASS EFFECT
+===================================== */
+
+
+.glass{
+
+    background:
+
+    rgba(255,255,255,0.12);
+
+
+    backdrop-filter:
+
+    blur(20px);
+
+
+    -webkit-backdrop-filter:
+
+    blur(20px);
+
+
+    border:
+
+    1px solid rgba(255,255,255,0.25);
+
+
+    box-shadow:
+
+    0 20px 50px rgba(0,0,0,0.25);
+
+
+    border-radius:30px;
+
+}
+
+
+
+
+
+/* =====================================
+   LOADING SCREEN
+===================================== */
+
+
+#loader{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100vh;
+
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+
+    background:
+
+    linear-gradient(
+    135deg,
+    #ff758c,
+    #ff7eb3
+    );
+
+
+    z-index:9999;
+
+}
+
+
+
+.loader-card{
+
+    width:320px;
+
+    padding:40px;
+
+    text-align:center;
+
+
+    background:
+
+    rgba(255,255,255,.18);
+
+
+    border-radius:30px;
+
+
+    backdrop-filter:blur(25px);
+
+}
+
+
+
+
+.loader-heart{
+
+    font-size:60px;
+
+    animation:
+
+    pulse 1s infinite;
+
+}
+
+
+
+.loader-card h2{
+
+    margin-top:20px;
+
+    font-size:24px;
+
+}
+
+
+
+.loader-card p{
+
+    margin:10px;
+
+}
+
+
+
+.loader-bar{
+
+    width:100%;
+
+    height:8px;
+
+    background:
+
+    rgba(255,255,255,.3);
+
+    border-radius:20px;
+
+    overflow:hidden;
+
+}
+
+
+
+.loader-bar span{
+
+    display:block;
+
+    width:0%;
+
+    height:100%;
+
+    background:white;
+
+    animation:
+
+    loading 3s forwards;
+
+}
+
+
+
+
+
+@keyframes loading{
+
+    to{
+
+        width:100%;
+
+    }
+
+}
+
+
+
+@keyframes pulse{
+
+    50%{
+
+        transform:scale(1.2);
+
+    }
+
+}
+
+
+
+
+
+
+
+/* =====================================
+   COUNTDOWN
+===================================== */
+
+
+#countdown-screen{
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+}
+
+
+
+.countdown-box{
+
+    text-align:center;
+
+    padding:50px;
+
+    width:350px;
+
+}
+
+
+
+.countdown-box h1{
+
+    font-size:30px;
+
+}
+
+
+
+#countdown{
+
+    font-size:120px;
+
+    font-weight:700;
+
+
+    background:
+
+    linear-gradient(
+    45deg,
+    #fff,
+    #ffd6e7
+    );
+
+
+    -webkit-background-clip:text;
+
+    color:transparent;
+
+
+}
+
+
+
+
+
+/* =====================================
+   MAIN PAGE
+===================================== */
+
+
+#birthday-page{
+
+    display:none;
+
+    position:relative;
+
+    min-height:100vh;
+
+    padding:30px;
+
+}
+
+
+
+
+#fireworks{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:100%;
+
+    pointer-events:none;
+
+}
+
+
+
+
+
+/* =====================================
+   HERO
+===================================== */
+
+
+.hero{
+
+    max-width:900px;
+
+    margin:50px auto;
+
+    padding:60px 30px;
+
+    text-align:center;
+
+}
+
+
+
+.birthday-title{
+
+    font-size:80px;
+
+    font-family:'Great Vibes',cursive;
+
+}
+
+
+
+.birthday-name{
+
+    font-size:55px;
+
+    margin:20px;
+
+
+}
+
+
+
+#typing-text{
+
+    font-size:22px;
+
+    min-height:40px;
+
+}
+
+
+
+
+
+button{
+
+    border:none;
+
+    padding:15px 35px;
+
+    border-radius:50px;
+
+    margin-top:25px;
+
+
+    background:white;
+
+    color:#ff4b7d;
+
+    font-size:18px;
+
+    cursor:pointer;
+
+
+    transition:.4s;
+
+}
+
+
+
+button:hover{
+
+    transform:scale(1.08);
+
+}
+
+
+
+
+
+
+/* =====================================
+   SLIDER
+===================================== */
+
+
+.memory-section{
+
+    max-width:900px;
+
+    margin:40px auto;
+
+    padding:40px;
+
+    text-align:center;
+
+}
+
+
+
+.slider{
+
+    width:100%;
+
+    max-width:800px;
+
+    height:auto;
+
+    aspect-ratio:4/3;
+
+    margin:30px auto;
+
+    position:relative;
+
+    overflow:hidden;
+
+    border-radius:30px;
+
+}
+
+
+
+.slide{
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    opacity:0;
+
+    transition:1s ease;
+
+}
+
+
+
+.slide.active{
+
+    opacity:1;
+
+}
+
+/* =====================================
+   CAKE SECTION
+===================================== */
+
+
+.cake-section{
+
+    max-width:600px;
+
+    margin:50px auto;
+
+    padding:40px;
+
+    text-align:center;
+
+}
+
+
+
+#cake{
+
+    position:relative;
+
+    width:220px;
+
+    height:180px;
+
+    margin:40px auto;
+
+    cursor:pointer;
+
+}
+
+
+
+.cake-body{
+
+    position:absolute;
+
+    bottom:0;
+
+    width:220px;
+
+    height:100px;
+
+    background:
+
+    linear-gradient(
+    #ff8fab,
+    #ff4d6d
+    );
+
+    border-radius:
+
+    20px 20px 30px 30px;
+
+}
+
+
+
+.cream-layer{
+
+    position:absolute;
+
+    top:60px;
+
+    width:220px;
+
+    height:30px;
+
+    background:white;
+
+    border-radius:50%;
+
+}
+
+
+
+.candle{
+
+    position:absolute;
+
+    top:0;
+
+    left:95px;
+
+    width:30px;
+
+    height:60px;
+
+    background:
+
+    linear-gradient(
+    #fff,
+    #ffd166
+    );
+
+    border-radius:10px;
+
+}
+
+
+
+.flame{
+
+    position:absolute;
+
+    top:-35px;
+
+    left:7px;
+
+    width:18px;
+
+    height:35px;
+
+
+    background:
+
+    orange;
+
+
+    border-radius:
+
+    50% 50% 50% 0;
+
+
+    transform:rotate(-45deg);
+
+
+    animation:
+
+    flame 0.5s infinite alternate;
+
+}
+
+
+
+@keyframes flame{
+
+    from{
+
+        transform:rotate(-45deg) scale(1);
+
+    }
+
+
+    to{
+
+        transform:rotate(-45deg) scale(1.2);
+
+    }
+
+}
+
+
+
+
+/* =====================================
+   GIFT BOX
+===================================== */
+
+
+.gift-section{
+
+    max-width:600px;
+
+    margin:50px auto;
+
+    padding:40px;
+
+    text-align:center;
+
+}
+
+
+
+#gift-box{
+
+    width:160px;
+
+    height:160px;
+
+    margin:40px auto;
+
+    position:relative;
+
+    cursor:pointer;
+
+}
+
+
+
+.gift-body{
+
+    position:absolute;
+
+    bottom:0;
+
+    width:160px;
+
+    height:110px;
+
+
+    background:
+
+    linear-gradient(
+    #ff4d6d,
+    #c9184a
+    );
+
+
+    border-radius:10px;
+
+}
+
+
+
+.gift-lid{
+
+    position:absolute;
+
+    top:20px;
+
+    width:170px;
+
+    height:35px;
+
+    left:-5px;
+
+
+    background:#ff758f;
+
+
+    border-radius:10px;
+
+    transition:.8s;
+
+}
+
+
+
+#gift-box.open .gift-lid{
+
+    transform:
+
+    translateY(-80px)
+    rotate(-20deg);
+
+}
+
+
+
+#gift-message{
+
+    display:none;
+
+}
+
+
+
+.message-card{
+
+    padding:30px;
+
+    margin-top:30px;
+
+}
+
+
+
+
+
+/* =====================================
+   SURPRISE POPUP
+===================================== */
+
+
+#surprise-popup{
+
+    display:none;
+
+    position:fixed;
+
+    inset:0;
+
+    background:
+
+    rgba(0,0,0,.6);
+
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:1000;
+
+}
+
+
+
+.popup-card{
+
+    max-width:500px;
+
+    padding:40px;
+
+    text-align:center;
+
+    position:relative;
+
+}
+
+
+
+#close-popup{
+
+    position:absolute;
+
+    top:10px;
+
+    right:10px;
+
+    width:45px;
+
+    height:45px;
+
+    padding:0;
+
+}
+
+
+
+
+
+/* =====================================
+   FLOATING ELEMENTS
+===================================== */
+
+
+.balloon{
+
+    position:fixed;
+
+    bottom:-100px;
+
+    width:60px;
+
+    height:80px;
+
+    border-radius:50%;
+
+    background:
+
+    linear-gradient(
+    45deg,
+    #ff4d6d,
+    #ffd6e0
+    );
+
+
+    animation:
+
+    float 10s linear infinite;
+
+}
+
+
+
+.heart{
+
+    position:fixed;
+
+    bottom:-50px;
+
+    font-size:30px;
+
+    animation:
+
+    float 8s linear infinite;
+
+}
+
+
+
+.petal{
+
+    position:fixed;
+
+    top:-50px;
+
+    font-size:25px;
+
+    animation:
+
+    fall 10s linear infinite;
+
+}
+
+
+
+.confetti{
+
+    position:fixed;
+
+    width:10px;
+
+    height:20px;
+
+    animation:
+
+    fall 5s linear infinite;
+
+}
+
+
+
+
+@keyframes float{
+
+    to{
+
+        transform:
+
+        translateY(-120vh)
+        rotate(360deg);
+
+    }
+
+}
+
+
+
+@keyframes fall{
+
+    to{
+
+        transform:
+
+        translateY(120vh)
+        rotate(360deg);
+
+    }
+
+}
+
+
+
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+
+footer{
+
+    text-align:center;
+
+    padding:40px;
+
+    opacity:.8;
+
+}
+
+
+
+
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+
+@media(max-width:768px){
+
+
+    .birthday-title{
+
+        font-size:55px;
+
+    }
+
+
+    .birthday-name{
+
+        font-size:40px;
+
+    }
+
+
+    #countdown{
+
+        font-size:80px;
+
+    }
+
+
+    .hero{
+
+        padding:40px 20px;
+
+    }
+
+
+    .slider{
+
+        height:300px;
+
+    }
+
+
+    .glass{
+
+        border-radius:20px;
+
+    }
+
+
+}
